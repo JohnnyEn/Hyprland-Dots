@@ -86,24 +86,27 @@
 	"tooltip": true,
 	"tooltip-format": "{timeTo} {power}w",
 	"on-click-middle": "$HOME/.config/hypr/scripts/ChangeBlur.sh",
-	"on-click-right": "$HOME/.config/hypr/scripts/Wlogout.sh",
+	"on-click-right": "$HOME/.config/hypr/scripts/Wlogout.sh"
 },
 
 "mpris": {
-  	"format": "{player_icon} {dynamic}",
-  	"format-paused": "{status_icon} <i>{dynamic}</i>",
-  	"player-icons": {
-  		"default": "▶",
-  		"kdeconnect": "🎵",
-  		"cmus": "[🎵]",
-  	},
-  	"album-len": 0,
-  	"dynamic-len": 40,
-  	"dynamic-order": ["artist", "title"],
-  	"status-icons": {
-  		"paused": "⏸"
-  	},
+  "format": "{player_icon} {dynamic}",
+  "format-paused": "{status_icon} <i>{dynamic}</i>",
+  "player-icons": {
+		"default": "▶",
+		"kdeconnect": "🎵",
+		"cmus": "[🎵]",
   },
+	"on-click-middle": "playerctl next",
+	"on-click": "playerctl play-pause",
+	"on-click-right": "playerctl previous",
+  "album-len": 0,
+  "dynamic-len": 40,
+  "dynamic-order": ["artist", "title"],
+  "status-icons": {
+		"paused": "⏸"
+  }
+},
 
 "cpu#forest": {
 	"format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% 󰍛",

@@ -111,9 +111,9 @@
 		"8":"Otto",
 		"9":"Nove",
 		"10":"Dieci"
-	}	
+	}
   },
-  
+
 //  NUMBERS and ICONS style
 "hyprland/workspaces#4": {
 	"format": "{name}",
@@ -165,11 +165,11 @@
 		"10": "10",
 	},
 },
-// NUMBERS and ICONS style with window rewrite 
+// NUMBERS and ICONS style with window rewrite
 "hyprland/workspaces#rw": {
 	"active-only": false,
 	"disable-scroll": true,
-	"all-outputs": true,
+	"all-outputs": false,
 	"warp-on-scroll": false,
 	"sort-by-number": true,
 	"show-special": false,
@@ -177,12 +177,12 @@
 	"on-scroll-up": "hyprctl dispatch workspace e+1",
 	"on-scroll-down": "hyprctl dispatch workspace e-1",
 	"persistent-workspaces": {
-		"*": 5
-	  },
+		"*": [1, 2, 3, 4, 5]
+	},
 	"format": "{icon} {windows}",
 	"format-window-separator": " ",
 	"window-rewrite-default": " ",
-	"window-rewrite": {		
+	"window-rewrite": {
 		"title<.*amazon.*>": " ",
 		"title<.*reddit.*>": " ",
 
@@ -194,6 +194,9 @@
 		"class<brave-browser>": "🦁 ",
 		"class<tor browser>": " ",
 		"class<firefox-developer-edition>": "🦊 ",
+		"class<vivaldi-stable>": " ",
+		"class<Element>": "🗪",
+		"class<@joplin/app-desktop>": "🗈",
 
 		"class<kitty|konsole|[Aa]lacritty>": " ",
 		"class<kitty-dropterm>": " ",
@@ -262,7 +265,7 @@
 		"class<nwg-displays>": " ",
 		"class<[Pp]avucontrol|org.pulseaudio.pavucontrol>": "󱡫 ",
 		"class<steam>": " ",
-		"class<thunar|nemo>": "󰝰 ",	
+		"class<thunar|nemo>": "󰝰 ",
 		"class<Gparted>":"",
 		"class<gimp>": " ",
 		"class<emulator>": "📱 ",
