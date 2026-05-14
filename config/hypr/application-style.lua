@@ -1,0 +1,10 @@
+-- /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+-- as per Hyprland wiki: hyprland-qt-support provides a QML style for hypr* qt6 apps
+
+hl.config({
+  hyprlandqt = {
+    roundness     = 2,
+    border_width  = 0,
+    reduce_motion = false,
+  },
+})

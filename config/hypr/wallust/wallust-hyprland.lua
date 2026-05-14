@@ -1,0 +1,21 @@
+-- /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+-- wallust template - colors-hyprland
+
+hl.variable("background", "rgb(252224)")
+hl.variable("foreground", "rgb(FDE8B6)")
+hl.variable("color0",     "rgb(4B484A)")
+hl.variable("color1",     "rgb(27181F)")
+hl.variable("color2",     "rgb(63233C)")
+hl.variable("color3",     "rgb(722643)")
+hl.variable("color4",     "rgb(B53886)")
+hl.variable("color5",     "rgb(B86558)")
+hl.variable("color6",     "rgb(BA8D22)")
+hl.variable("color7",     "rgb(F3D58E)")
+hl.variable("color8",     "rgb(AA9563)")
+hl.variable("color9",     "rgb(342029)")
+hl.variable("color10",    "rgb(842E4F)")
+hl.variable("color11",    "rgb(983259)")
+hl.variable("color12",    "rgb(F24BB2)")
+hl.variable("color13",    "rgb(F68775)")
+hl.variable("color14",    "rgb(F8BC2E)")
+hl.variable("color15",    "rgb(F3D58E)")
