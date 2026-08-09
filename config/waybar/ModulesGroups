@@ -40,9 +40,9 @@
 		"transition-left-to-right": true
         },
 	"modules": [
-		"temperature",		
+		"temperature",
 		"cpu",
-		"power-profiles-daemon",	
+		"power-profiles-daemon",
 		"memory",
 		"disk",
 	]
@@ -97,13 +97,12 @@
 "group/notify": {
 	"orientation": "inherit",
 	"drawer": {
-		"transition-duration": 500,
+		"transition-duration": 100,
 		"children-class": "custom/swaync",
 		"transition-left-to-right": false
         },
 	"modules": [
-		"custom/swaync",
-		"custom/dot_update",
+		"custom/swaync"
 	]
 },
 

@@ -25,21 +25,21 @@
 "modules-left": [
   "custom/arch",
 	"hyprland/workspaces#rw",
-	"mpris",
+	"mpris"
 	],
 "modules-center": [
 	"hyprland/window"
 	],
 "modules-right": [
 	"cpu#forest",
-	"temperature#forest",
-	"memory#forest",
+	"group/temperature",
+	"custom/memory",
 	"disk#forest",
 	"group/audio",
 	"battery#forest",
 	"clock#forest",
 	"group/notify",
-	"tray",
+	"tray"
 	],
 
 // Additional / Edited Waybar Modules //
@@ -119,6 +119,7 @@
 	],
 	"on-click-right": "gnome-system-monitor",
 	"critical-threshold": 90,
+	"tooltip": false,
 },
 
 "disk#forest": {
@@ -139,9 +140,16 @@
 	"format-alt": " {percentage}%    󰾆",
 	"format-alt-click": "click",
 	"tooltip": true,
-	"tooltip-format": "Ram    {used:0.1f}GB/{total:0.1f}G",
+	"tooltip-format": "Ram    {used:0.1f}G/{total:0.1f}G",
 	"on-click-right": "kitty --title btop sh -c 'btop'"
 },
+
+"custom/memory": {
+    "interval": 10,
+    "format": " 󰾆  {}G ",
+    "exec": "awk '/^MemTotal:/ {t=$2} /^MemFree:/ {f=$2} /^Buffers:/ {b=$2} /^Cached:/ {c=$2} /^SReclaimable:/ {sr=$2} /^Shmem:/ {sh=$2} END {printf \"%.1f\\n\", (t - f - b - c - sr + sh) / 1024 / 1024}' /proc/meminfo"
+},
+
 "temperature#forest": {
 	"interval": 10,
 	"tooltip": true,
@@ -158,7 +166,28 @@
 	],
 	"on-click-right": "kitty --title nvtop sh -c 'nvtop'"
 },
+
+"custom/rpm": {
+	"format": "{}",
+	"exec": "sensors | awk '/fan1:/ {print $2,$3}'",
+	"interval": 1,
+	"tooltip": false,
+},
+
+"group/temperature": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 500,
+		"children-class": "temperature-forest",
+		"transition-left-to-right": true	
+	},
+	"modules": [
+		"temperature#forest",
+		"custom/rpm"
+	]
+},
+
 "hyprland/window": {
     "separate-outputs": true
-},
+}
 }
