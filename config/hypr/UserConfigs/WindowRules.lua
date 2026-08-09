@@ -58,6 +58,12 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "slackWindowrule",
+    match = { class = "slack" },
+    workspace = 4
+})
+
+hl.window_rule({
     name = "joplinWindowrule",
     match = { class = "@joplin/app-desktop" },
     workspace = 4
@@ -85,7 +91,7 @@ hl.window_rule({
     float = true,
     tile = false,
     center = true,
-    stay_focused = true,
+    stay_focused = false,
     size = "(monitor_w*0.33) (monitor_h*0.33)"
 })
 
@@ -113,4 +119,25 @@ hl.window_rule({
     float = true,
     group = "gimpExport",
     size = "(monitor_w*0.5) (monitor_h*0.5)"
+})
+
+hl.window_rule({
+    name = "wttrWeather",
+    match = { class = "^(wttr-weather)$" },
+    float = true,
+    group = "wttrWeather",
+    size = ("(monitor_w*0.75) (monitor_h*0.90)")
+})
+
+hl.window_rule({
+	name = "floating_terminal",
+	match = { class = "^(floating_term)" },
+	float = true,
+	center = true,
+	size = ("(monitor_w*0.33) (monitor_h*0.33)")
+})
+
+hl.window_rule({
+    match = { float = false },
+    ["hyprbars:no_bar"] = true,
 })

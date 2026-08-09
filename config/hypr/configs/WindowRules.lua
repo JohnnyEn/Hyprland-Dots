@@ -815,3 +815,16 @@ hl.window_rule({
     center = true,
     size = "(monitor_w*0.26) (monitor_h*0.18)"
 })
+
+hl.window_rule({
+    name = "xwayland-video-bridge-fixes",
+    match = {
+        class = "xwaylandvideobridge"
+    },
+    no_initial_focus = true,
+    no_focus = true,
+    no_anim = true,
+    no_blur = true,
+    max_size = "(monitor_w*1) (monitor_h*1)",
+    opacity = 0.0
+})

@@ -78,6 +78,9 @@ main_loop() {
             k)
                 playerctl -p "${players[$current_index]}" play-pause &>/dev/null
                 ;;
+            c)
+            	playerctl -p "${players[$current_index]}" play-pause &>/dev/null
+            	;;
             l)
                 playerctl -p "${players[$current_index]}" next &>/dev/null
                 ;;

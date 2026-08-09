@@ -30,6 +30,9 @@ require("UserConfigs.LaptopDisplay")
 require("configs.Monitors")
 require("workspaces")
 
+-- PLUGINS
+require("UserConfigs.Plugins")
+
 -- KEYBINDS
 require("configs.Keybinds")
 

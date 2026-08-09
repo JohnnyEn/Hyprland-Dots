@@ -32,8 +32,10 @@ hl.config({
     kb_model = "",
     kb_options = "",
     kb_rules = "",
-    repeat_rate = 50,
-    repeat_delay = 300,
+    -- repeat_rate = 50,
+    -- repeat_delay = 300,
+    repeat_rate = 35,
+    repeat_delay = 450,
 
     sensitivity = 0, -- mouse sensitivity
     -- accel_profile = "adaptive", -- flat or adaptive or blank or EMPTY means libinput's default mode -- commented
@@ -121,6 +123,8 @@ hl.config({
     no_warps = false,
   },
 })
+
+
 
 -- Gesture actions
 -- Note: pinchin/pinchout direction names may need verification against your Hyprland version

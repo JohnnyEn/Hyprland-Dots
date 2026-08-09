@@ -9,6 +9,9 @@ local scriptsDir = configDir .. "/scripts"
 local touchpadDevice = "synaptics-tm3471-030"
 local touchpadEnabled = true
 
+local externalTouchpad = "hid-05ac:0265-touchpad"  -- from hyprctl devices
+
+
 -- Keyboard brightness
 hl.bind("xf86KbdBrightnessDown", hl.dsp.exec_cmd(scriptsDir .. "/BrightnessKbd.sh --dec"), {
   repeating = true
@@ -37,3 +40,7 @@ hl.device({
   name    = touchpadDevice,
   enabled = touchpadEnabled,
 })
+
+hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd(
+  "hyprctl keyword device[" .. externalTouchpad .. "]:enabled true"
+), { locked = true })
